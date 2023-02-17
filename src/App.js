@@ -1,11 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Company from './pages/Company';
 
 function App() {
   return (
-    <div>
-      Throttle
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/company' element={<Company />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
